@@ -38,7 +38,6 @@ def get_devices():
             break
     return devices
 
-
 #adb命令
 def adb(args):
     # global serialno_num
@@ -74,8 +73,6 @@ def get_current_activity():
     package = shell("dumpsys activity | findstr  mFocusedActivity").stdout.read()
     print pattern.findall(package)[0].split('/')[-1]
     return pattern.findall(package)[0].split('/')[-1]
-
-
 
 if __name__ == "__main__":
     get_current_activity()
