@@ -7,7 +7,6 @@ reload(sys)
 sys.path.append('E:\TestAndroid')
 from script import get_cpu_mem_info as info
 
-
 class GenerateReport :
     def __init__(self, wd):
         self.wd = wd
@@ -27,7 +26,6 @@ class GenerateReport :
         for i in range(len(mem)):
             worksheet.write(i+1,1,cpu[i],format1)
 
-
         self.chart(worksheet,sheet,'cpu',len(cpu))
         self.chart(worksheet,sheet,'mem',len(mem))
 
@@ -40,7 +38,6 @@ class GenerateReport :
         :param lenData: 数组长度
         :return:
         '''
-
 
         if type == 'cpu':
             values = "="+sheet+"!$A$2:$A$" + str(lenData + 1)
