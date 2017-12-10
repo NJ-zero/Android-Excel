@@ -5,7 +5,7 @@
 import sys,os
 import xlsxwriter
 reload(sys)
-sys.path.append('D:\Ptest\AndroidScripts')
+sys.path.append('E:\TestAndroid')
 from public import publicfunction as util
 
 PATH = lambda p: os.path.abspath(p)
