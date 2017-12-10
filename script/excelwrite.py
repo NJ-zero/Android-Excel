@@ -8,12 +8,10 @@ reload(sys)
 import get_cpu_mem_info as info
 
 
-
 def chart_cpu(name,lenData):
     values= '=' + name + "!$A$1:$A$" + str(lenData + 1)
     row = 'A' + str(lenData)
     title = 'cpu占用率'
-
 
 
 def workbook(filename,sheet):
@@ -59,13 +57,7 @@ def workbook(filename,sheet):
         })
     chart1.set_title({'name': title})
     worksheet.insert_chart(row, chart1)
-
-
-
     return workbook
-
-
-
 
 if __name__ == "__main__":
     workbook('D:/file/android.xlsx',sheet = str(info.devices()))
